@@ -1,8 +1,8 @@
 package com.jaago.jaago;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Executor;
 
 public class  RegisterationActivity extends AppCompatActivity {
     private Button mRegistration;

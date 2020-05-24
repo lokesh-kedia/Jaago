@@ -1,11 +1,10 @@
 package com.jaago.jaago;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -15,7 +14,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.storage.FirebaseStorage;
 
 public class ReadWrite extends AppCompatActivity {
     private int th=0;

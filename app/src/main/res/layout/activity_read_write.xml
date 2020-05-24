@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -384,7 +384,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/srcflo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
