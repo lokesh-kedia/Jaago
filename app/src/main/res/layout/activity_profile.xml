@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorAccent">
+
+                <ImageButton
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/book" />
+
+                <ImageButton
+                    android:id="@+id/settings"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/settings"
+                    android:onClick="opensettings"/>
+
+                <ImageButton
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:layout_toLeftOf="@id/settings"
+                    android:scaleType="fitCenter"
+
+                    android:src="@mipmap/adduser" />
+
+                <ImageButton
+                    android:id="@+id/userimg"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/adduser" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userimg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:text="Lokes Kedia"
+                    android:id="@+id/username"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@mipmap/title" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/textback"
+                        android:hint="Add your description here : "
+                        android:padding="8dp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Stories By you > "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Following > "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Reading List > "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

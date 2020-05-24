@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundCardColor"
+    android:orientation="vertical"
+    tools:context=".ReadWrite">
+
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:titleTextColor="#FFF" />
+
+        <Switch
+            android:id="@+id/temptxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/searchicon"
+            android:text="Night"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/searchicon"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:onClick="opensearch"
+            android:scaleType="fitCenter"
+            android:src="@drawable/loupe" />
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageButton
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:onClick="opentool"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back" />
+
+            <EditText
+                android:id="@+id/searchtxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:hint="Search"
+                android:textColor="?attr/textcolor" />
+
+            <ImageButton
+                android:id="@+id/dosearch"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:onClick="dosearch"
+                android:scaleType="fitCenter"
+                android:src="@drawable/loupe" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse Categories"
+        android:layout_below="@id/content_frame"
+        android:id="@+id/brocat"
+        android:textSize="20dp"
+        android:layout_margin="8dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brocat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/RelTragedy"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick">
+
+                    <ImageView
+                        android:id="@+id/tragedy"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/tragedy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tragedy"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Tragedy"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/RelScience"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick">
+
+                    <ImageView
+                        android:id="@+id/science"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/biology" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/science"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Science"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/RelFantasy"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick">
+
+                    <ImageView
+                        android:id="@+id/Fantasy"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/fantasy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Fantasy"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Fantasy"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/RelMyth"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick">
+
+                    <ImageView
+                        android:id="@+id/Mythology"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/myth" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Mythology"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Mythology"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/RelAdvn"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick">
+
+                    <ImageView
+                        android:id="@+id/adventure"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/adventurer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/adventure"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Adventure"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick"
+                    android:id="@+id/RelMystry"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/Mystry"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/mystery" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Mystry"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Mystry"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginBottom="80dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:id="@+id/RelFiction"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick">
+
+                    <ImageView
+                        android:id="@+id/fiction"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/fiction" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fiction"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Fiction"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@layout/category_bg"
+                    android:onClick="tick"
+                    android:id="@+id/RelHorrer"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:id="@+id/horrer"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/horrer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/horrer"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Horrer"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/srcflo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="postarticle"
+        android:src="@drawable/edit" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/calflo"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home"
+            android:onClick="openhome"/>
+
+        <ImageButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="openlib"
+            android:scaleType="fitCenter"
+            android:src="@drawable/library" />
+
+        <ImageButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chat" />
+
+        <ImageButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="openprofile"
+            android:scaleType="fitCenter"
+            android:src="@drawable/user" />
+    </LinearLayout>
+</RelativeLayout>
+
