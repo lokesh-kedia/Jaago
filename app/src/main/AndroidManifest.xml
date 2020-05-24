@@ -25,13 +25,6 @@
         <activity android:name=".Sources" />
         <activity android:name=".SavedNews" />
 
-        <meta-data
-            android:name="com.google.android.geo.api_key"
-            android:value="AIzaSyAeb0-5Pf854RCR0TCMfWn1OSsmUjn80x0" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAeb0-5Pf854RCR0TCMfWn1OSsmUjn80x0" />
-
         <activity android:name=".ReadersCategory" />
         <activity android:name=".ChooseLogin" />
         <activity android:name=".LoginActivity" />
@@ -41,11 +34,6 @@
         <activity android:name=".PostFeed" />
         <activity android:name=".Profile" />
         <activity android:name=".Settings" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5314021439844328~5369045860" />
-
         <activity android:name=".PostRead" />
         <activity android:name=".ViewUser"></activity>
     </application>
